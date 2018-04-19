@@ -1,0 +1,26 @@
+﻿<Window x:Class="DataAnalysis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Анализ данных" Height="478.406" Width="700">
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-8,-500" HorizontalAlignment="Right" Width="700">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="578*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="244*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="txtEditor" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <TextBlock Name="txtTempEnergy" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBlock Name="txtTempTemperature" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button Name= "btnOpenFile" Grid.Column="2" Grid.Row="0" Click="btnOpenFile_Click" Content="Open file and &#xA;write it in temp"/>
+        <Button Name="btnClearTemp" Content="Clear temp" Click="btnClearTemp_Click" Grid.Column="3" Margin="0,0,115,0" />
+        <TextBlock x:Name="txtTest" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="355" Grid.ColumnSpan="2"><InlineUIContainer>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+            </InlineUIContainer></TextBlock>
+    </Grid>
+</Window>
